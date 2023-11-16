@@ -9,13 +9,17 @@ namespace ReservaHoteis.Domain.Entities
 
         }
 
-        public Hotel(int id, string? nome, string? estado) : base(id)
+        public Hotel(int id, string? nome, float? classificacao, string? endereco, Cidade? cidade) : base(id)
         {
             Nome = nome;
-            Estado = estado;
+            Classificacao= classificacao;
+            Endereco = endereco;
+            Cidade= cidade;
         }
 
         public string? Nome { get; set; }
-        public string? Estado { get; set; }
+        public float? Classificacao { get; set; }
+        public string? Endereco { get; set; }
+        public Cidade? Cidade { get; set; }
     }
 }

@@ -9,13 +9,20 @@ namespace ReservaHoteis.Domain.Entities
 
         }
 
-        public Cliente(int id, string? nome, string? estado) : base(id)
+        public Cliente(int id, string? nome, int? cpf, string? dataDeNascimento, string? email, string? senha) : base(id)
         {
             Nome = nome;
-            Estado = estado;
+            Cpf = cpf;
+            DataDeNascimento= dataDeNascimento;
+            Email = email;
+            Senha = senha;
+            
         }
 
         public string? Nome { get; set; }
-        public string? Estado { get; set; }
+        public int? Cpf { get; set; }
+        public string? DataDeNascimento { get; set; }
+        public string? Email { get; set; }
+        public string? Senha { get; set; }
     }
 }

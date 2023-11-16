@@ -6,16 +6,19 @@ namespace ReservaHoteis.Domain.Entities
     {
         public Contrato()
         {
-
+            Servicos = new List<Servico>();
         }
 
-        public Contrato(int id, string? nome, string? estado) : base(id)
+        public Contrato(int id, float? valorTotal, Hotel? hotel, Cliente? cliente) : base(id)
         {
-            Nome = nome;
-            Estado = estado;
+            ValorTotal= valorTotal;
+            Hotel= hotel;
+            Cliente= cliente;
         }
 
-        public string? Nome { get; set; }
-        public string? Estado { get; set; }
+        public float? ValorTotal { get; set; }
+        public Hotel? Hotel { get; set; }
+        public Cliente? Cliente { get; set; }
+        public List<Servico> Servicos { get;set; }
     }
 }
