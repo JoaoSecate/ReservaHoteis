@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservaHoteis.Domain", "Res
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservaHoteis.DDD", "ReservaHoteis.DDD", "{ADE85E58-D5B9-4EC9-AB23-A8D2B8417062}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservaHoteis.Repository", "ReservaHoteis.Repository\ReservaHoteis.Repository.csproj", "{29218AD9-0471-45C3-869C-61B9935490EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservaHoteis.Repository", "ReservaHoteis.Repository\ReservaHoteis.Repository.csproj", "{29218AD9-0471-45C3-869C-61B9935490EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservaHoteis.Service", "ReservaHoteis.Service\ReservaHoteis.Service.csproj", "{32FCCE05-63C5-4D0F-B0A5-21C1C840236E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReservaHoteis.Service", "ReservaHoteis.Service\ReservaHoteis.Service.csproj", "{32FCCE05-63C5-4D0F-B0A5-21C1C840236E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReservaHoteis.App", "ReservaHoteis.App", "{536C8C77-EC2F-49CB-AAF3-0A2E36E2E80F}"
 EndProject

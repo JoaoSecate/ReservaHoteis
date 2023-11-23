@@ -9,7 +9,7 @@ namespace ReservaHoteis.Domain.Entities
 
         }
 
-        public Servico(int id, string? nome, string? descricao, string? tipo, float? valor, Hotel? hotel) : base(id)
+        public Servico(int id, string nome, string? descricao, string tipo, float? valor, Hotel hotel) : base(id)
         {
             Nome = nome;
             Descricao= descricao;
@@ -18,10 +18,10 @@ namespace ReservaHoteis.Domain.Entities
             Hotel = hotel;
         }
 
-        public string? Nome { get; set; }
+        public string Nome { get; set; }
         public string? Descricao { get; set; }
-        public string? Tipo { get; set;}
+        public string Tipo { get; set;}
         public float? Valor { get; set;}
-        public Hotel? Hotel { get; set; }
+        public virtual Hotel Hotel { get; set; }
     }
 }

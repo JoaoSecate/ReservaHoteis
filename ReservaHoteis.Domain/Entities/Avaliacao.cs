@@ -9,7 +9,7 @@ namespace ReservaHoteis.Domain.Entities
 
         }
 
-        public Avaliacao(int id, float nota, string? descricao, Hotel? hotel, Cliente? cliente) : base(id)
+        public Avaliacao(int id, float nota, string? descricao, Hotel hotel, Cliente cliente) : base(id)
         {
             Nota = nota;
             Descricao = descricao;
@@ -19,7 +19,7 @@ namespace ReservaHoteis.Domain.Entities
 
         public float? Nota { get; set; }
         public string? Descricao { get; set; }
-        public Hotel? Hotel { get; set; }
-        public Cliente? Cliente { get; set; }
+        public virtual Hotel? Hotel { get; set; }
+        public virtual Cliente? Cliente { get; set; }
     }
 }
