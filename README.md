@@ -1,12 +1,14 @@
 # ReservaHoteis
 ## Telas
-1- Login/
-  Se usuario e senha for admin entrar na pagina admin/
+1- Login\
+  - Se usuario e senha for admin entrar na pagina admin
+  - Inserir Email e Senha\
 1.1- Cadastro
-2- Inicial
+  - Inserir Email e Senha\
+2- Inicial\
   - Perfil
   - Buscar Hotel
-  - Contratos ativo (visualizar)
+  - Contratos ativo (visualizar)\
 3- Buscar Hotel(Cidade)
   - Campo Cidade
 3.1 - Buscar Hotel(Exibir)
