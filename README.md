@@ -26,5 +26,15 @@
   - Realizar Pedido (Servico Tipo Pedido)
 ### CO- Contrato Antigo
   - Dados
+### Admin
 
+## Serviços
+  ### Pacote (Exclusivo)
+    Caso seja selecionado um pacote, quarto e adcional é bloqueado
+  ### Quarto (Obrigatório)
+    Deve ser selecionado
+  ### Adcional (Opicional)
+    Não é obrigatorio
+  ### Pedido
+    Adciona um serviço a um contrato ativo
 ![alt text](https://github.com/JoaoSecate/ReservaHoteis/blob/master/DB/ReservaHoteis_DB_Model.png)
