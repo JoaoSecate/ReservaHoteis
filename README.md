@@ -1,7 +1,7 @@
 # ReservaHoteis
 ## Telas
-1- Login
-  Se usuario e senha for admin entrar na pagina admin
+1- Login/
+  Se usuario e senha for admin entrar na pagina admin/
 1.1- Cadastro
 2- Inicial
   - Perfil
