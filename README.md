@@ -4,7 +4,7 @@
   - Se usuario e senha for admin entrar na pagina admin
   - Inserir Email e Senha
 
-### 2- Inicial
+### 2- Principal
   - Perfil
   - Buscar Hotel
   - Contratos ativo (visualizar)
