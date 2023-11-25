@@ -1,10 +1,7 @@
 # ReservaHoteis
 ## Telas
-### 1- Login
+### 1- Login/ Cadastro
   - Se usuario e senha for admin entrar na pagina admin
-  - Inserir Email e Senha
-
-### 1.1- Cadastro
   - Inserir Email e Senha
 
 ### 2- Inicial
