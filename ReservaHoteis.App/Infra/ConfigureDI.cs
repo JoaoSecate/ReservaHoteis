@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 //using ReservaHoteis.App.Cadastros;
 //using ReservaHoteis.App.Models;
-//using ReservaHoteis.App.Outros;
+using ReservaHoteis.App.Outros;
 using ReservaHoteis.Domain.Base;
 using ReservaHoteis.Domain.Entities;
 using ReservaHoteis.Repository.Context;
@@ -53,15 +53,15 @@ namespace ReservaHoteis.App.Infra
             Services.AddScoped<IBaseService<Avaliacao>, BaseService<Avaliacao>>();
 
             // Formulários
-            /*
+            
             Services.AddTransient<Login, Login>();
-            Services.AddTransient<CadastroCidade, CadastroCidade>();
-            Services.AddTransient<CadastroCliente, CadastroCliente>();
-            Services.AddTransient<CadastroContrato, CadastroContrato>();
-            Services.AddTransient<CadastroHotel, CadastroHotel>();
-            Services.AddTransient<CadastroServico, CadastroServico>();
-            Services.AddTransient<CadastroAvaliacao, CadastroAvaliacao>();
-            */
+            //Services.AddTransient<CadastroCidade, CadastroCidade>();
+            //Services.AddTransient<CadastroCliente, CadastroCliente>();
+            //Services.AddTransient<CadastroContrato, CadastroContrato>();
+            //Services.AddTransient<CadastroHotel, CadastroHotel>();
+            //Services.AddTransient<CadastroServico, CadastroServico>();
+            //Services.AddTransient<CadastroAvaliacao, CadastroAvaliacao>();
+            
 
             // Mapping
             /*
