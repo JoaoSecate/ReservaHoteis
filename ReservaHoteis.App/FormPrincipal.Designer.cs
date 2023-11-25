@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            test_btnCidade = new ReaLTaiizor.Controls.AirButton();
             SuspendLayout();
+            // 
+            // test_btnCidade
+            // 
+            test_btnCidade.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            test_btnCidade.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            test_btnCidade.Image = null;
+            test_btnCidade.Location = new Point(558, 97);
+            test_btnCidade.Name = "test_btnCidade";
+            test_btnCidade.NoRounding = false;
+            test_btnCidade.Size = new Size(100, 45);
+            test_btnCidade.TabIndex = 0;
+            test_btnCidade.Text = "Cidade";
+            test_btnCidade.Transparent = false;
+            test_btnCidade.Click += test_btnCidade_Click;
             // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(test_btnCidade);
             Name = "FormPrincipal";
             Text = "Form Principal";
-            Load += FormPrincipal_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private ReaLTaiizor.Controls.AirButton test_btnCidade;
     }
 }

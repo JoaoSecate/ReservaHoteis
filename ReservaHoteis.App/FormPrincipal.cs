@@ -1,9 +1,9 @@
 using ReservaHoteis.Domain.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using ReaLTaiizor.Forms;
-
 using ReservaHoteis.App.Infra;
 using ReservaHoteis.App.Outros;
+using ReservaHoteis.App.Cadastros;
 
 namespace ReservaHoteis.App
 
@@ -33,9 +33,19 @@ namespace ReservaHoteis.App
             }
         }
 
-        private void FormPrincipal_Load(object sender, EventArgs e)
+        private void test_btnCidade_Click(object sender, EventArgs e)
         {
+            Exibeformulario<CadastroCidade>();
+        }
 
+        private void Exibeformulario<TFormlario>() where TFormlario : Form
+        {
+            var cad = ConfigureDI.ServicesProvider!.GetService<TFormlario>();
+            if (cad != null && !cad.IsDisposed)
+            {
+                cad.MdiParent = this;
+                cad.Show();
+            }
         }
     }
 }

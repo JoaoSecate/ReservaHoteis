@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-//using ReservaHoteis.App.Cadastros;
-//using ReservaHoteis.App.Models;
+using ReservaHoteis.App.Cadastros;
+using ReservaHoteis.App.Models;
 using ReservaHoteis.App.Outros;
 using ReservaHoteis.Domain.Base;
 using ReservaHoteis.Domain.Entities;
@@ -25,7 +25,7 @@ namespace ReservaHoteis.App.Infra
             Services = new ServiceCollection();
             Services.AddDbContext<MySqlContext>(options =>
             {
-                var strCon = File.ReadAllText("Config/DatabaseSettings.txt");
+                var strCon = "Server = localhost; Port = 3306; Database = ReservaHoteis; Uid = root; Pwd =";//File.ReadAllText("Config/DatabaseSettings.txt");
                 options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
                 options.EnableSensitiveDataLogging();
 
@@ -55,7 +55,7 @@ namespace ReservaHoteis.App.Infra
             // Formulários
             
             Services.AddTransient<Login, Login>();
-            //Services.AddTransient<CadastroCidade, CadastroCidade>();
+            Services.AddTransient<CadastroCidade, CadastroCidade>();
             //Services.AddTransient<CadastroCliente, CadastroCliente>();
             //Services.AddTransient<CadastroContrato, CadastroContrato>();
             //Services.AddTransient<CadastroHotel, CadastroHotel>();
@@ -64,22 +64,20 @@ namespace ReservaHoteis.App.Infra
             
 
             // Mapping
-            /*
+            
             Services.AddSingleton(new MapperConfiguration(config =>
             {
-                config.CreateMap<Cidade, CidadeModel>()
-                    .ForMember(d => d.NomeEstado, d => d.MapFrom(x => $"{x.Nome}/{x.Estado}"));
-                config.CreateMap<Cliente, ClienteModel>()
-                    .ForMember(d => d.Cidade, d => d.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"))
-                    .ForMember(d => d.IdCidade, d => d.MapFrom(x => x.Cidade!.Id));
+                config.CreateMap<Cliente, ClienteModel>();
+                config.CreateMap<Cidade, CidadeModel>();
+                /*
                 config.CreateMap<Contrato, Contrato>();
                 config.CreateMap<Hotel, HotelModel>()
                     .ForMember(d => d.Servicos, d => d.MapFrom(x => x.Servicos.Select(s => s.Nome).ToList()));
                 config.CreateMap<Servico, ServicoModel>();
                 config.CreateMap<Avaliacao, AvaliacaoModel>();
-
+                */
             }).CreateMapper());
-            */
+            
 
             ServicesProvider = Services.BuildServiceProvider();
         }
