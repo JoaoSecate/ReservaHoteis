@@ -34,7 +34,7 @@ namespace ReservaHoteis.Repository.Mapping
 
             builder.HasOne(prop => prop.Contrato);
 
-            builder.HasMany(prop => prop.Servico);
+            builder.HasOne(prop => prop.Servico);
         }
     }
 }
