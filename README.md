@@ -1,13 +1,9 @@
 # ReservaHoteis
 ## Telas
-### 1- Login
+### 1- Login/ Cadastro
   - Se usuario e senha for admin entrar na pagina admin
   - Inserir Email e Senha
-
-### 1.1- Cadastro
-  - Inserir Email e Senha
-
-### 2- Inicial
+### 2- Principal
   - Perfil
   - Buscar Hotel
   - Contratos ativo (visualizar)
@@ -29,12 +25,14 @@
 ### Admin
 
 ## Serviços
-  ### Pacote (Exclusivo)
-    Caso seja selecionado um pacote, quarto e adcional é bloqueado
-  ### Quarto (Obrigatório)
-    Deve ser selecionado
-  ### Adcional (Opicional)
-    Não é obrigatorio
-  ### Pedido
-    Adciona um serviço a um contrato ativo
+### Pacote (Exclusivo)
+  - Caso seja selecionado um pacote, quarto e adcional é bloqueado
+### Quarto (Obrigatório)
+  - Deve ser selecionado
+### Adcional (Opicional)
+  - Não é obrigatorio
+### Pedido
+  - Adciona um serviço a um contrato ativo
+
+## Modelo
 ![alt text](https://github.com/JoaoSecate/ReservaHoteis/blob/master/DB/ReservaHoteis_DB_Model.png)
