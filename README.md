@@ -4,12 +4,12 @@
   - Se usuario e senha for admin entrar na pagina admin
   - Inserir Email e Senha
 ### 2- Principal
-  - Perfil
+  - Perfil (Nome e Email)
   - Buscar Hotel
-  - Contratos ativo (visualizar)
+  - Contratos ativo (info e botão "Detalhes")
 ### 3- Buscar Hotel(Cidade)
   - Campo Cidade
-### 3.1 - Buscar Hotel(Exibir)
+### 3.1- Buscar Hotel(Exibir)
   - Filtrar por classificação
 ### 4- Novo Contrato
   - Selecionar Serviços (Pacotes/Quartos/Adcional)
@@ -19,11 +19,15 @@
   - Alterar Dados
 ### C- Contrato
   - Dados
+  - Lista de serviços feitos
+  - Total
   - Realizar Pedido (Servico Tipo Pedido)
 ### CO- Contrato Antigo
   - Dados
 ### Admin
-
+  - Registrar Usuario
+  - Registrar Cidade
+  - Registrar Hotel
 ## Serviços
 ### Pacote (Exclusivo)
   - Caso seja selecionado um pacote, quarto e adcional é bloqueado
