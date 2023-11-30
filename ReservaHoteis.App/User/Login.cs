@@ -10,8 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace ReservaHoteis.App.Outros
+namespace ReservaHoteis.App.User
 {
     public partial class Login : Form
     {

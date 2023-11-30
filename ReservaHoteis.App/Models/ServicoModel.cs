@@ -9,6 +9,6 @@ namespace ReservaHoteis.App.Models
         public string? Descricao { get; set; }
         public string Tipo { get; set; }
         public float? Valor { get; set; }
-        public virtual Hotel Hotel { get; set; }
+        public int idHotel { get; set; }
     }
 }

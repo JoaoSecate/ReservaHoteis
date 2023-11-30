@@ -2,7 +2,7 @@ using ReservaHoteis.Domain.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using ReaLTaiizor.Forms;
 using ReservaHoteis.App.Infra;
-using ReservaHoteis.App.Outros;
+using ReservaHoteis.App.User;
 using ReservaHoteis.App.Cadastros;
 
 namespace ReservaHoteis.App

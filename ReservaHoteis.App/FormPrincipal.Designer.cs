@@ -28,32 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            test_btnCidade = new ReaLTaiizor.Controls.AirButton();
-            SuspendLayout();
+            this.test_btnCidade = new ReaLTaiizor.Controls.AirButton();
+            this.SuspendLayout();
             // 
             // test_btnCidade
             // 
-            test_btnCidade.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
-            test_btnCidade.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            test_btnCidade.Image = null;
-            test_btnCidade.Location = new Point(558, 97);
-            test_btnCidade.Name = "test_btnCidade";
-            test_btnCidade.NoRounding = false;
-            test_btnCidade.Size = new Size(100, 45);
-            test_btnCidade.TabIndex = 0;
-            test_btnCidade.Text = "Cidade";
-            test_btnCidade.Transparent = false;
-            test_btnCidade.Click += test_btnCidade_Click;
+            this.test_btnCidade.Customization = "7e3t//Ly8v/r6+v/5ubm/+vr6//f39//p6en/zw8PP8UFBT/gICA/w==";
+            this.test_btnCidade.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.test_btnCidade.Image = null;
+            this.test_btnCidade.Location = new System.Drawing.Point(31, 99);
+            this.test_btnCidade.Name = "test_btnCidade";
+            this.test_btnCidade.NoRounding = false;
+            this.test_btnCidade.Size = new System.Drawing.Size(100, 45);
+            this.test_btnCidade.TabIndex = 0;
+            this.test_btnCidade.Text = "Cidade";
+            this.test_btnCidade.Transparent = false;
+            this.test_btnCidade.Click += new System.EventHandler(this.test_btnCidade_Click);
             // 
             // FormPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(test_btnCidade);
-            Name = "FormPrincipal";
-            Text = "Form Principal";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(102)))), ((int)(((byte)(173)))));
+            this.ClientSize = new System.Drawing.Size(920, 528);
+            this.Controls.Add(this.test_btnCidade);
+            this.IsMdiContainer = true;
+            this.Name = "FormPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form Principal";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

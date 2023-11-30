@@ -7,7 +7,7 @@ namespace ReservaHoteis.App.Models
         public int Id { get; set; }
         public float? Nota { get; set; }
         public string? Descricao { get; set; }
-        public virtual Hotel? Hotel { get; set; }
-        public virtual Cliente? Cliente { get; set; }
+        public int idHotel { get; set; }
+        public int idCliente { get; set; }
     }
 }

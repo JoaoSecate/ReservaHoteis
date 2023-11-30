@@ -139,9 +139,5 @@ namespace ReservaHoteis.App.Base
 
         #endregion
 
-        private void CadastroBase_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -8,6 +8,6 @@ namespace ReservaHoteis.App.Models
         public string Nome { get; set; }
         public float? Classificacao { get; set; }
         public string Endereco { get; set; }
-        public virtual Cidade Cidade { get; set; }
+        public int idCidade { get; set; }
     }
 }
