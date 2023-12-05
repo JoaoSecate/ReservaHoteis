@@ -28,6 +28,8 @@
   - Registrar Usuario
   - Registrar Cidade
   - Registrar Hotel
+  - Registar Serviços
+  - Registrar Contrato
 ## Serviços
 ### Pacote (Exclusivo)
   - Caso seja selecionado um pacote, quarto e adcional é bloqueado
