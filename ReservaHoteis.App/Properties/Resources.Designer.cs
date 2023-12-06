@@ -63,6 +63,16 @@ namespace ReservaHoteis.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BuscarHotel_btnIcon {
+            get {
+                object obj = ResourceManager.GetObject("BuscarHotel_btnIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_background {
             get {
                 object obj = ResourceManager.GetObject("login_background", resourceCulture);
@@ -86,6 +96,26 @@ namespace ReservaHoteis.App.Properties {
         internal static System.Drawing.Bitmap Logo_Nome {
             get {
                 object obj = ResourceManager.GetObject("Logo_Nome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Perfil_Mask {
+            get {
+                object obj = ResourceManager.GetObject("Perfil_Mask", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Perfil_Pic_PlaceHolder {
+            get {
+                object obj = ResourceManager.GetObject("Perfil_Pic_PlaceHolder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

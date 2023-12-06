@@ -27,13 +27,26 @@ namespace ReservaHoteis.App.User
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            //TODO Logar Usuario
             DialogResult = DialogResult.OK;
             Close();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            Login_panel.Visible = false;
+            Cad_panel.Visible = true;
+        }
 
+        private void Cad_btnVoltar_Click(object sender, EventArgs e)
+        {
+            Login_panel.Visible = true;
+            Cad_panel.Visible = false;
+        }
+
+        private void Cad_btnConf_Click(object sender, EventArgs e)
+        {
+            //TODO
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ReservaHoteis.Domain": {
+      "commandName": "Project"
+    },
+    "Perfil 1": {
+      "commandName": "Executable"
+    }
+  }
+}

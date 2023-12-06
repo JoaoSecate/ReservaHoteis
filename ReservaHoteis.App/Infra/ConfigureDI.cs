@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ReservaHoteis.App.Cadastros;
 using ReservaHoteis.App.Models;
-using ReservaHoteis.App.Outros;
+using ReservaHoteis.App.User;
 using ReservaHoteis.Domain.Base;
 using ReservaHoteis.Domain.Entities;
 using ReservaHoteis.Repository.Context;
