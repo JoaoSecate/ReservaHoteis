@@ -73,6 +73,16 @@ namespace ReservaHoteis.App.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hotel_class {
+            get {
+                object obj = ResourceManager.GetObject("Hotel_class", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_background {
             get {
                 object obj = ResourceManager.GetObject("login_background", resourceCulture);
