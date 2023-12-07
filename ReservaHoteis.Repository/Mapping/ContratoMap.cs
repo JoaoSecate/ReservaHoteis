@@ -24,17 +24,4 @@ namespace ReservaHoteis.Repository.Mapping
             builder.HasOne(prop => prop.Hotel);
         }
     }
-    public class ContratoServicoMap : IEntityTypeConfiguration<ContratoServico>
-    {
-        public void Configure(EntityTypeBuilder<ContratoServico> builder)
-        {
-            builder.ToTable("ContratoServico");
-
-            builder.HasKey(prop => prop.Id);
-
-            builder.HasOne(prop => prop.Contrato);
-
-            builder.HasOne(prop => prop.Servico);
-        }
-    }
 }

@@ -54,7 +54,7 @@ namespace ReservaHoteis.Repository.Repository
             return dbContext.ToList();
         }
 
-        //public TEntity Select(object id) => _mySqlContext.Set<TEntity>().Find(id)!;
+        public TEntity Select(object id) => _mySqlContext.Set<TEntity>().Find(id)!;
         public TEntity Select(object id, IList<string>? includes = null)
         {
             var dbContext = _mySqlContext.Set<TEntity>().AsQueryable();

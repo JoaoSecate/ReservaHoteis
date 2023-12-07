@@ -19,7 +19,7 @@ namespace ReservaHoteis.App
 
         private void CarregaLogin()
         {
-            var login = new Login(); //ConfigureDI.ServicesProvider!.GetService<Login>();
+            var login = ConfigureDI.ServicesProvider!.GetService<Login>();
             if (login != null && !login.IsDisposed)
             {
                 if (login.ShowDialog() != DialogResult.OK)
@@ -33,11 +33,6 @@ namespace ReservaHoteis.App
             }
         }
 
-        private void test_btnCidade_Click(object sender, EventArgs e)
-        {
-            Exibeformulario<CadastroCidade>();
-        }
-
         private void Exibeformulario<TFormlario>() where TFormlario : Form
         {
             var cad = ConfigureDI.ServicesProvider!.GetService<TFormlario>();
@@ -46,6 +41,11 @@ namespace ReservaHoteis.App
                 cad.MdiParent = this;
                 cad.Show();
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

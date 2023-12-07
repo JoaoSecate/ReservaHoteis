@@ -41,7 +41,6 @@ namespace ReservaHoteis.App.Infra
             Services.AddScoped<IBaseRepository<Cliente>, BaseRepository<Cliente>>();
             Services.AddScoped<IBaseRepository<Contrato>, BaseRepository<Contrato>>();
             Services.AddScoped<IBaseRepository<Hotel>, BaseRepository<Hotel>>();
-            Services.AddScoped<IBaseRepository<Servico>, BaseRepository<Servico>>();
             Services.AddScoped<IBaseRepository<Avaliacao>, BaseRepository<Avaliacao>>();
 
             // Services
@@ -49,18 +48,16 @@ namespace ReservaHoteis.App.Infra
             Services.AddScoped<IBaseService<Cliente>, BaseService<Cliente>>();
             Services.AddScoped<IBaseService<Contrato>, BaseService<Contrato>>();
             Services.AddScoped<IBaseService<Hotel>, BaseService<Hotel>>();
-            Services.AddScoped<IBaseService<Servico>, BaseService<Servico>>();
             Services.AddScoped<IBaseService<Avaliacao>, BaseService<Avaliacao>>();
 
             // Formulários
             
             Services.AddTransient<Login, Login>();
             Services.AddTransient<CadastroCidade, CadastroCidade>();
-            //Services.AddTransient<CadastroCliente, CadastroCliente>();
-            //Services.AddTransient<CadastroContrato, CadastroContrato>();
-            //Services.AddTransient<CadastroHotel, CadastroHotel>();
-            //Services.AddTransient<CadastroServico, CadastroServico>();
-            //Services.AddTransient<CadastroAvaliacao, CadastroAvaliacao>();
+            Services.AddTransient<CadastroCliente, CadastroCliente>();
+            Services.AddTransient<CadastroContrato, CadastroContrato>();
+            Services.AddTransient<CadastroHotel, CadastroHotel>();
+            Services.AddTransient<CadastroAvaliacao, CadastroAvaliacao>();
             
 
             // Mapping
