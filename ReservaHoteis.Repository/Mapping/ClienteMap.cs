@@ -19,14 +19,6 @@ namespace ReservaHoteis.Repository.Mapping
             builder.Property(prop => prop.Documento)
                 .IsRequired()
                 .HasColumnType("varchar(45)");
-
-            builder.Property(prop => prop.Email)
-                .IsRequired()
-                .HasColumnType("varchar(45)");
-
-            builder.Property(prop => prop.Senha)
-                .IsRequired()
-                .HasColumnType("varchar(45)");
         }
     }
 }

@@ -67,18 +67,16 @@ namespace ReservaHoteis.App.Infra
                 config.CreateMap<Cliente, ClienteModel>();
                 config.CreateMap<Cidade, CidadeModel>()
                     .ForMember(d => d.NomeEstado, d => d.MapFrom(x => $"{x.Nome}/{x.Estado}"));
-                /*
+               
                 config.CreateMap<Contrato, ContratoModel>()
                     .ForMember(d => d.Hotel, d => d.MapFrom(x => $"{x.Hotel!.Nome}"))
                     .ForMember(d => d.IdHotel, d => d.MapFrom(x => x.Hotel!.Id))
                     .ForMember(d => d.Cliente, d => d.MapFrom(x => $"{x.Cliente!.Nome}"))
                     .ForMember(d => d.IdCliente, d => d.MapFrom(x => x.Cliente!.Id));
-                
-                config.CreateMap<Hotel, HotelModel>()
-                    .ForMember(d => d.Servicos, d => d.MapFrom(x => x.Servicos.Select(s => s.Nome).ToList()));
-                config.CreateMap<Servico, ServicoModel>();
+
+                config.CreateMap<Hotel, HotelModel>();
                 config.CreateMap<Avaliacao, AvaliacaoModel>();
-                */
+                
             }).CreateMapper());
             
 

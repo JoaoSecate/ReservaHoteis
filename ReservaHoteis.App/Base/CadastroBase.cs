@@ -24,8 +24,7 @@ namespace ReservaHoteis.App.Base
                     MessageBoxIcon.Question)
                 == DialogResult.Yes)
             {
-                LimpaCampos();
-                materialTabControl.SelectedIndex = 1;
+                this.Dispose();
             }
         }
 
@@ -137,7 +136,6 @@ namespace ReservaHoteis.App.Base
 
         }
 
-        #endregion
-
+#endregion
     }
 }

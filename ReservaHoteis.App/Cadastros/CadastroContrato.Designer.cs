@@ -28,138 +28,153 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialTextBoxEdit1 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.materialTextBoxEdit2 = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            this.materialTabControl.SuspendLayout();
-            this.tabPageCadastro.SuspendLayout();
-            this.SuspendLayout();
+            txtValor = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            cboHotel = new ReaLTaiizor.Controls.MaterialComboBox();
+            cboCliente = new ReaLTaiizor.Controls.MaterialComboBox();
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
+            materialTabControl.SuspendLayout();
+            tabPageCadastro.SuspendLayout();
+            SuspendLayout();
             // 
             // materialTabControl
             // 
-            this.materialTabControl.Size = new System.Drawing.Size(794, 383);
+            materialTabControl.Size = new Size(794, 383);
             // 
             // tabPageCadastro
             // 
-            this.tabPageCadastro.Controls.Add(this.materialTextBoxEdit2);
-            this.tabPageCadastro.Controls.Add(this.materialTextBoxEdit1);
-            this.tabPageCadastro.Controls.Add(this.txtId);
-            this.tabPageCadastro.Size = new System.Drawing.Size(786, 355);
-            this.tabPageCadastro.Controls.SetChildIndex(this.txtId, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.materialTextBoxEdit1, 0);
-            this.tabPageCadastro.Controls.SetChildIndex(this.materialTextBoxEdit2, 0);
+            tabPageCadastro.Controls.Add(txtId);
+            tabPageCadastro.Controls.Add(cboHotel);
+            tabPageCadastro.Controls.Add(cboCliente);
+            tabPageCadastro.Controls.Add(txtValor);
+            tabPageCadastro.Size = new Size(786, 355);
+            tabPageCadastro.Controls.SetChildIndex(txtValor, 0);
+            tabPageCadastro.Controls.SetChildIndex(cboCliente, 0);
+            tabPageCadastro.Controls.SetChildIndex(cboHotel, 0);
+            tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             // 
-            // materialTextBoxEdit1
+            // txtValor
             // 
-            this.materialTextBoxEdit1.AnimateReadOnly = false;
-            this.materialTextBoxEdit1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.materialTextBoxEdit1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.materialTextBoxEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBoxEdit1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBoxEdit1.Depth = 0;
-            this.materialTextBoxEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBoxEdit1.HideSelection = true;
-            this.materialTextBoxEdit1.Hint = "Id";
-            this.materialTextBoxEdit1.LeadingIcon = null;
-            this.materialTextBoxEdit1.Location = new System.Drawing.Point(138, 25);
-            this.materialTextBoxEdit1.MaxLength = 32767;
-            this.materialTextBoxEdit1.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.materialTextBoxEdit1.Name = "materialTextBoxEdit1";
-            this.materialTextBoxEdit1.PasswordChar = '\0';
-            this.materialTextBoxEdit1.PrefixSuffixText = null;
-            this.materialTextBoxEdit1.ReadOnly = true;
-            this.materialTextBoxEdit1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBoxEdit1.SelectedText = "";
-            this.materialTextBoxEdit1.SelectionLength = 0;
-            this.materialTextBoxEdit1.SelectionStart = 0;
-            this.materialTextBoxEdit1.ShortcutsEnabled = true;
-            this.materialTextBoxEdit1.Size = new System.Drawing.Size(70, 48);
-            this.materialTextBoxEdit1.TabIndex = 14;
-            this.materialTextBoxEdit1.TabStop = false;
-            this.materialTextBoxEdit1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBoxEdit1.TrailingIcon = null;
-            this.materialTextBoxEdit1.UseSystemPasswordChar = false;
+            txtValor.AnimateReadOnly = false;
+            txtValor.AutoCompleteMode = AutoCompleteMode.None;
+            txtValor.AutoCompleteSource = AutoCompleteSource.None;
+            txtValor.BackgroundImageLayout = ImageLayout.None;
+            txtValor.CharacterCasing = CharacterCasing.Normal;
+            txtValor.Depth = 0;
+            txtValor.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtValor.HideSelection = true;
+            txtValor.Hint = "Valor";
+            txtValor.LeadingIcon = null;
+            txtValor.Location = new Point(37, 119);
+            txtValor.MaxLength = 32767;
+            txtValor.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtValor.Name = "txtValor";
+            txtValor.PasswordChar = '\0';
+            txtValor.PrefixSuffixText = null;
+            txtValor.ReadOnly = false;
+            txtValor.RightToLeft = RightToLeft.No;
+            txtValor.SelectedText = "";
+            txtValor.SelectionLength = 0;
+            txtValor.SelectionStart = 0;
+            txtValor.ShortcutsEnabled = true;
+            txtValor.Size = new Size(70, 48);
+            txtValor.TabIndex = 15;
+            txtValor.TabStop = false;
+            txtValor.TextAlign = HorizontalAlignment.Left;
+            txtValor.TrailingIcon = null;
+            txtValor.UseSystemPasswordChar = false;
+            // 
+            // cboHotel
+            // 
+            cboHotel.AutoResize = false;
+            cboHotel.BackColor = Color.FromArgb(255, 255, 255);
+            cboHotel.Depth = 0;
+            cboHotel.DrawMode = DrawMode.OwnerDrawVariable;
+            cboHotel.DropDownHeight = 174;
+            cboHotel.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboHotel.DropDownWidth = 121;
+            cboHotel.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboHotel.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboHotel.FormattingEnabled = true;
+            cboHotel.IntegralHeight = false;
+            cboHotel.ItemHeight = 43;
+            cboHotel.Location = new Point(183, 20);
+            cboHotel.MaxDropDownItems = 4;
+            cboHotel.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboHotel.Name = "cboHotel";
+            cboHotel.Size = new Size(110, 49);
+            cboHotel.StartIndex = 0;
+            cboHotel.TabIndex = 18;
+            // 
+            // cboCliente
+            // 
+            cboCliente.AutoResize = false;
+            cboCliente.BackColor = Color.FromArgb(255, 255, 255);
+            cboCliente.Depth = 0;
+            cboCliente.DrawMode = DrawMode.OwnerDrawVariable;
+            cboCliente.DropDownHeight = 174;
+            cboCliente.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCliente.DropDownWidth = 121;
+            cboCliente.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboCliente.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cboCliente.FormattingEnabled = true;
+            cboCliente.IntegralHeight = false;
+            cboCliente.ItemHeight = 43;
+            cboCliente.Location = new Point(37, 21);
+            cboCliente.MaxDropDownItems = 4;
+            cboCliente.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            cboCliente.Name = "cboCliente";
+            cboCliente.Size = new Size(110, 49);
+            cboCliente.StartIndex = 0;
+            cboCliente.TabIndex = 17;
             // 
             // txtId
             // 
-            this.txtId.AnimateReadOnly = false;
-            this.txtId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtId.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtId.HideSelection = true;
-            this.txtId.Hint = "Id";
-            this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(37, 25);
-            this.txtId.MaxLength = 32767;
-            this.txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.txtId.Name = "txtId";
-            this.txtId.PasswordChar = '\0';
-            this.txtId.PrefixSuffixText = null;
-            this.txtId.ReadOnly = true;
-            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtId.SelectedText = "";
-            this.txtId.SelectionLength = 0;
-            this.txtId.SelectionStart = 0;
-            this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(70, 48);
-            this.txtId.TabIndex = 13;
-            this.txtId.TabStop = false;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtId.TrailingIcon = null;
-            this.txtId.UseSystemPasswordChar = false;
-            // 
-            // materialTextBoxEdit2
-            // 
-            this.materialTextBoxEdit2.AnimateReadOnly = false;
-            this.materialTextBoxEdit2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.materialTextBoxEdit2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.materialTextBoxEdit2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBoxEdit2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBoxEdit2.Depth = 0;
-            this.materialTextBoxEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBoxEdit2.HideSelection = true;
-            this.materialTextBoxEdit2.Hint = "Id";
-            this.materialTextBoxEdit2.LeadingIcon = null;
-            this.materialTextBoxEdit2.Location = new System.Drawing.Point(37, 119);
-            this.materialTextBoxEdit2.MaxLength = 32767;
-            this.materialTextBoxEdit2.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            this.materialTextBoxEdit2.Name = "materialTextBoxEdit2";
-            this.materialTextBoxEdit2.PasswordChar = '\0';
-            this.materialTextBoxEdit2.PrefixSuffixText = null;
-            this.materialTextBoxEdit2.ReadOnly = true;
-            this.materialTextBoxEdit2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBoxEdit2.SelectedText = "";
-            this.materialTextBoxEdit2.SelectionLength = 0;
-            this.materialTextBoxEdit2.SelectionStart = 0;
-            this.materialTextBoxEdit2.ShortcutsEnabled = true;
-            this.materialTextBoxEdit2.Size = new System.Drawing.Size(70, 48);
-            this.materialTextBoxEdit2.TabIndex = 15;
-            this.materialTextBoxEdit2.TabStop = false;
-            this.materialTextBoxEdit2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBoxEdit2.TrailingIcon = null;
-            this.materialTextBoxEdit2.UseSystemPasswordChar = false;
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "Id";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(616, 20);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(70, 48);
+            txtId.TabIndex = 19;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
             // 
             // CadastroContrato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "CadastroContrato";
-            this.Text = "CadastroContrato";
-            this.materialTabControl.ResumeLayout(false);
-            this.tabPageCadastro.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Location = new Point(0, 0);
+            Name = "CadastroContrato";
+            Text = "CadastroContrato";
+            materialTabControl.ResumeLayout(false);
+            tabPageCadastro.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit materialTextBoxEdit1;
+        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtValor;
+        private ReaLTaiizor.Controls.MaterialComboBox cboHotel;
+        private ReaLTaiizor.Controls.MaterialComboBox cboCliente;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit materialTextBoxEdit2;
     }
 }

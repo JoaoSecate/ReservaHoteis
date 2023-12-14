@@ -38,7 +38,6 @@ namespace ReservaHoteis.App
             var cad = ConfigureDI.ServicesProvider!.GetService<TFormlario>();
             if (cad != null && !cad.IsDisposed)
             {
-                cad.MdiParent = this;
                 cad.Show();
             }
         }
@@ -46,6 +45,31 @@ namespace ReservaHoteis.App
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroCliente>();
+        }
+
+        private void btnContratos_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroContrato>();
+        }
+
+        private void btnAvaliações_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroAvaliacao>();
+        }
+
+        private void btnHoteis_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroHotel>();
+        }
+
+        private void btnCidades_Click(object sender, EventArgs e)
+        {
+            Exibeformulario<CadastroCidade>();
         }
     }
 }
