@@ -39,8 +39,6 @@
             this.Cad_panel = new System.Windows.Forms.Panel();
             this.Cad_txtNome = new ReaLTaiizor.Controls.HopeTextBox();
             this.Cad_btnVoltar = new ReaLTaiizor.Controls.HopeRoundButton();
-            this.Cad_txtConfSenha = new ReaLTaiizor.Controls.HopeTextBox();
-            this.Cad_txtDoc = new ReaLTaiizor.Controls.HopeTextBox();
             this.Cad_btnConf = new ReaLTaiizor.Controls.HopeRoundButton();
             this.Cad_txtSenha = new ReaLTaiizor.Controls.HopeTextBox();
             this.Cad_txtEmail = new ReaLTaiizor.Controls.HopeTextBox();
@@ -201,8 +199,6 @@
             this.Cad_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(102)))), ((int)(((byte)(173)))));
             this.Cad_panel.Controls.Add(this.Cad_txtNome);
             this.Cad_panel.Controls.Add(this.Cad_btnVoltar);
-            this.Cad_panel.Controls.Add(this.Cad_txtConfSenha);
-            this.Cad_panel.Controls.Add(this.Cad_txtDoc);
             this.Cad_panel.Controls.Add(this.Cad_btnConf);
             this.Cad_panel.Controls.Add(this.Cad_txtSenha);
             this.Cad_panel.Controls.Add(this.Cad_txtEmail);
@@ -223,7 +219,7 @@
             this.Cad_txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Cad_txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.Cad_txtNome.Hint = "Nome Completo";
-            this.Cad_txtNome.Location = new System.Drawing.Point(35, 273);
+            this.Cad_txtNome.Location = new System.Drawing.Point(35, 305);
             this.Cad_txtNome.MaxLength = 32767;
             this.Cad_txtNome.Multiline = false;
             this.Cad_txtNome.Name = "Cad_txtNome";
@@ -258,52 +254,6 @@
             this.Cad_btnVoltar.WarningColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(162)))), ((int)(((byte)(60)))));
             this.Cad_btnVoltar.Click += new System.EventHandler(this.Cad_btnVoltar_Click);
             // 
-            // Cad_txtConfSenha
-            // 
-            this.Cad_txtConfSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.Cad_txtConfSenha.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.Cad_txtConfSenha.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.Cad_txtConfSenha.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.Cad_txtConfSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Cad_txtConfSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.Cad_txtConfSenha.Hint = "Confirmar Senha";
-            this.Cad_txtConfSenha.Location = new System.Drawing.Point(35, 446);
-            this.Cad_txtConfSenha.MaxLength = 32767;
-            this.Cad_txtConfSenha.Multiline = false;
-            this.Cad_txtConfSenha.Name = "Cad_txtConfSenha";
-            this.Cad_txtConfSenha.PasswordChar = '*';
-            this.Cad_txtConfSenha.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Cad_txtConfSenha.SelectedText = "";
-            this.Cad_txtConfSenha.SelectionLength = 0;
-            this.Cad_txtConfSenha.SelectionStart = 0;
-            this.Cad_txtConfSenha.Size = new System.Drawing.Size(292, 38);
-            this.Cad_txtConfSenha.TabIndex = 8;
-            this.Cad_txtConfSenha.TabStop = false;
-            this.Cad_txtConfSenha.UseSystemPasswordChar = true;
-            // 
-            // Cad_txtDoc
-            // 
-            this.Cad_txtDoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.Cad_txtDoc.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(55)))), ((int)(((byte)(66)))));
-            this.Cad_txtDoc.BorderColorA = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(158)))), ((int)(((byte)(255)))));
-            this.Cad_txtDoc.BorderColorB = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            this.Cad_txtDoc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Cad_txtDoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
-            this.Cad_txtDoc.Hint = "Documento";
-            this.Cad_txtDoc.Location = new System.Drawing.Point(35, 328);
-            this.Cad_txtDoc.MaxLength = 32767;
-            this.Cad_txtDoc.Multiline = false;
-            this.Cad_txtDoc.Name = "Cad_txtDoc";
-            this.Cad_txtDoc.PasswordChar = '\0';
-            this.Cad_txtDoc.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Cad_txtDoc.SelectedText = "";
-            this.Cad_txtDoc.SelectionLength = 0;
-            this.Cad_txtDoc.SelectionStart = 0;
-            this.Cad_txtDoc.Size = new System.Drawing.Size(292, 38);
-            this.Cad_txtDoc.TabIndex = 7;
-            this.Cad_txtDoc.TabStop = false;
-            this.Cad_txtDoc.UseSystemPasswordChar = false;
-            // 
             // Cad_btnConf
             // 
             this.Cad_btnConf.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
@@ -333,7 +283,7 @@
             this.Cad_txtSenha.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Cad_txtSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.Cad_txtSenha.Hint = "Senha";
-            this.Cad_txtSenha.Location = new System.Drawing.Point(35, 392);
+            this.Cad_txtSenha.Location = new System.Drawing.Point(35, 361);
             this.Cad_txtSenha.MaxLength = 32767;
             this.Cad_txtSenha.Multiline = false;
             this.Cad_txtSenha.Name = "Cad_txtSenha";
@@ -356,7 +306,7 @@
             this.Cad_txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Cad_txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(49)))), ((int)(((byte)(51)))));
             this.Cad_txtEmail.Hint = "Login";
-            this.Cad_txtEmail.Location = new System.Drawing.Point(35, 219);
+            this.Cad_txtEmail.Location = new System.Drawing.Point(35, 251);
             this.Cad_txtEmail.MaxLength = 32767;
             this.Cad_txtEmail.Multiline = false;
             this.Cad_txtEmail.Name = "Cad_txtEmail";
@@ -429,8 +379,6 @@
         private ReaLTaiizor.Controls.HopeTextBox Cad_txtSenha;
         private ReaLTaiizor.Controls.HopeTextBox Cad_txtEmail;
         private ReaLTaiizor.Controls.HopePictureBox hopePictureBox2;
-        private ReaLTaiizor.Controls.HopeTextBox Cad_txtConfSenha;
-        private ReaLTaiizor.Controls.HopeTextBox Cad_txtDoc;
         private ReaLTaiizor.Controls.HopeRoundButton Cad_btnVoltar;
         private ReaLTaiizor.Controls.HopeTextBox Cad_txtNome;
     }

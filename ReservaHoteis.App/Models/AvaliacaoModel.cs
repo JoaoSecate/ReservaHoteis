@@ -9,5 +9,7 @@ namespace ReservaHoteis.App.Models
         public string? Descricao { get; set; }
         public int idHotel { get; set; }
         public int idCliente { get; set; }
+        public string Hotel { get; set; }
+        public string Cliente { get; set; }
     }
 }

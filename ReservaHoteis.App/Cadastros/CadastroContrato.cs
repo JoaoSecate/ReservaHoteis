@@ -1,4 +1,5 @@
 ﻿using ReservaHoteis.App.Base;
+using ReservaHoteis.App.Models;
 using ReservaHoteis.Domain.Base;
 using ReservaHoteis.Domain.Entities;
 using ReservaHoteis.Service.Validators;
@@ -14,9 +15,9 @@ namespace ReservaHoteis.App.Cadastros
         private readonly IBaseService<Cliente> _clienteService;
         private readonly IBaseService<Hotel> _hotelService;
         private readonly IBaseService<Contrato> _contratoService;
-        private List<Contrato>? contratos;
-        private List<Cliente>? clientes; // Adicione esta linha
-        private List<Hotel>? hoteis; // Adicione esta linha
+        private List<ContratoModel>? contratos;
+        private List<Cliente>? clientes; 
+        private List<Hotel>? hoteis; 
 
 
         public CadastroContrato(IBaseService<Contrato> contratoService, IBaseService<Cliente> clienteService, IBaseService<Hotel> hotelService)
@@ -31,15 +32,18 @@ namespace ReservaHoteis.App.Cadastros
         private void CarregarCliente()
         {
             clientes = _clienteService.Get<Cliente>().ToList();
+            cboCliente.ValueMember = "Id";
+            cboCliente.DisplayMember = "Nome";
             cboCliente.DataSource = clientes;
-            cboCliente.DisplayMember = "Nome"; 
+
         }
 
         private void CarregarHotel()
         {
             hoteis = _hotelService.Get<Hotel>().ToList();
+            cboHotel.ValueMember = "Id";
+            cboHotel.DisplayMember = "Nome";
             cboHotel.DataSource = hoteis;
-            cboHotel.DisplayMember = "Nome"; // Exibir o nome da cidade no ComboBox
         }
 
         private void PreencheObjeto(Contrato contrato)
@@ -47,7 +51,7 @@ namespace ReservaHoteis.App.Cadastros
             contrato.ValorTotal = (float?)decimal.Parse(txtValor.Text);
             contrato.Data = DateTime.Now;
 
-            // Lógica para obter o cliente e o hotel selecionados
+            // Obter o cliente e o hotel selecionados
             int clienteId, hotelId;
             if (int.TryParse(cboCliente.SelectedValue.ToString(), out clienteId) && int.TryParse(cboHotel.SelectedValue.ToString(), out hotelId))
             {
@@ -104,9 +108,12 @@ namespace ReservaHoteis.App.Cadastros
 
         protected override void CarregaGrid()
         {
-            contratos = _contratoService.Get<Contrato>().ToList();
+            contratos = _contratoService.Get<ContratoModel>(new[] { "Hotel", "Cliente" }).ToList();
+            //TODO
             dataGridViewConsulta.DataSource = contratos;
             dataGridViewConsulta.Columns["Data"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["idHotel"]!.Visible = false;
+            dataGridViewConsulta.Columns["idCliente"]!.Visible = false;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
@@ -115,15 +122,12 @@ namespace ReservaHoteis.App.Cadastros
             txtValor.Text = linha?.Cells["ValorTotal"].Value.ToString();
             txtValor.Text = linha?.Cells["Data"].Value.ToString();
 
-            // Lógica para selecionar o cliente e o hotel
+            // Selecionar o cliente e o hotel
             var clienteId = int.Parse(linha?.Cells["ClienteId"].Value.ToString());
             var hotelId = int.Parse(linha?.Cells["HotelId"].Value.ToString());
 
             cboCliente.SelectedValue = clienteId;
             cboHotel.SelectedValue = hotelId;
         }
-
-        // Outros métodos e eventos necessários...
-
     }
 }

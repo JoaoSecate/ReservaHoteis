@@ -13,6 +13,7 @@ namespace ReservaHoteis.App.Base
         public CadastroBase()
         {
             InitializeComponent();
+            CenterToScreen();
         }
         #endregion
 
@@ -136,6 +137,12 @@ namespace ReservaHoteis.App.Base
 
         }
 
-#endregion
+        #endregion
+
+        private void CadastroBase_Shown(object sender, EventArgs e)
+        {
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                          (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+        }
     }
 }

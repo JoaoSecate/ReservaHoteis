@@ -1,4 +1,5 @@
 ﻿using ReservaHoteis.App.Base;
+using ReservaHoteis.App.Models;
 using ReservaHoteis.Domain.Base;
 using ReservaHoteis.Domain.Entities;
 using ReservaHoteis.Service.Validators;
@@ -12,23 +13,28 @@ namespace ReservaHoteis.App.Cadastros
     public partial class CadastroHotel : CadastroBase
     {
         private readonly IBaseService<Hotel> _hotelService;
-        private readonly IBaseService<Cidade> _cidadeService; // Adicione esta linha
-        private List<Hotel>? hoteis;
+        private readonly IBaseService<Cidade> _cidadeService;
+        private readonly IBaseService<Avaliacao> _avaliacaoService;
+        private List<HotelModel>? hoteis;
         private List<Cidade>? cidades;
 
-        public CadastroHotel(IBaseService<Hotel> hotelService, IBaseService<Cidade> cidadeService) // Modifique esta linha
+        public CadastroHotel(IBaseService<Hotel> hotelService, 
+                            IBaseService<Cidade> cidadeService,
+                            IBaseService<Avaliacao> avaliacaoService) 
         {
             _hotelService = hotelService;
-            _cidadeService = cidadeService; // Adicione esta linha
+            _cidadeService = cidadeService; 
+            _avaliacaoService= avaliacaoService;
             InitializeComponent();
-            CarregarCidades(); // Adicione esta linha para carregar as cidades ao inicializar o formulário
+            CarregarCidades();
         }
 
         private void CarregarCidades()
         {
             cidades = _cidadeService.Get<Cidade>().ToList();
-            cboCidade.DataSource = cidades;
-            cboCidade.DisplayMember = "Nome"; // Exibir o nome da cidade no ComboBox
+            cboCidade.ValueMember = "Id";
+            cboCidade.DisplayMember = "Nome";
+            cboCidade.DataSource = cidades;            
         }
 
         private void PreencheObjeto(Hotel hotel)
@@ -36,7 +42,6 @@ namespace ReservaHoteis.App.Cadastros
             hotel.Nome = txtNome.Text;
             hotel.Endereco = txtEndereco.Text;
 
-            // Lógica para obter a cidade selecionada
             if (cboCidade.SelectedItem != null)
             {
                 hotel.Cidade = (Cidade)cboCidade.SelectedItem;
@@ -85,10 +90,16 @@ namespace ReservaHoteis.App.Cadastros
 
         protected override void CarregaGrid()
         {
-            hoteis = _hotelService.Get<Hotel>().ToList();
+            hoteis = _hotelService.Get<HotelModel>(new[] { "Cidade" }).ToList();
+            foreach(var hot in hoteis)
+            {
+                hot.Classificacao = _avaliacaoService.Get<Avaliacao>(new[] { "Hotel" }).Where(x => x.Hotel!.Id == hot.Id)
+                    .Select(y =>y.Nota).Average();
+            }
             dataGridViewConsulta.DataSource = hoteis;
             dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            
+            dataGridViewConsulta.Columns["idCidade"]!.Visible= false;
+            dataGridViewConsulta.Columns["Classificacao"].DefaultCellStyle.Format = "N2";
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)
@@ -97,12 +108,9 @@ namespace ReservaHoteis.App.Cadastros
             txtNome.Text = linha?.Cells["Nome"].Value.ToString();
             txtEndereco.Text = linha?.Cells["Endereco"].Value.ToString();
 
-            // Lógica para selecionar a cidade
-            var cidadeId = int.Parse(linha?.Cells["CidadeId"].Value.ToString());
+            // Selecionar a cidade
+            var cidadeId = int.Parse(linha?.Cells["idCidade"].Value.ToString());
             cboCidade.SelectedValue = cidadeId;
         }
-
-        // Outros métodos e eventos necessários...
-
     }
 }

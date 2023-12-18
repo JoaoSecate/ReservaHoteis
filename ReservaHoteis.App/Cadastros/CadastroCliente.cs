@@ -79,7 +79,5 @@ namespace ReservaHoteis.App.Cadastros
             txtNome.Text = linha?.Cells["Nome"].Value.ToString(); ;
         }
 
-        // Outros métodos e eventos necessários...
-
     }
 }

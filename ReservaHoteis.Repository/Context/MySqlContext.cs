@@ -19,6 +19,8 @@ namespace ReservaHoteis.Repository.Context
         public DbSet<Cliente>? Cliente { get; set; }
         public DbSet<Contrato>? Contrato { get; set; }
         public DbSet<Avaliacao>? Avaliacao { get; set; }
+        public DbSet<Usuario>? Usuario { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +31,8 @@ namespace ReservaHoteis.Repository.Context
             modelBuilder.Entity<Cliente>(new ClienteMap().Configure);
             modelBuilder.Entity<Contrato>(new ContratoMap().Configure);
             modelBuilder.Entity<Avaliacao>(new AvaliacaoMap().Configure);
+            modelBuilder.Entity<Usuario>(new UsuarioMap().Configure);
+
         }
     }
 }

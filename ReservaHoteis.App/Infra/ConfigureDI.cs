@@ -42,6 +42,7 @@ namespace ReservaHoteis.App.Infra
             Services.AddScoped<IBaseRepository<Contrato>, BaseRepository<Contrato>>();
             Services.AddScoped<IBaseRepository<Hotel>, BaseRepository<Hotel>>();
             Services.AddScoped<IBaseRepository<Avaliacao>, BaseRepository<Avaliacao>>();
+            Services.AddScoped<IBaseRepository<Usuario>, BaseRepository<Usuario>>();
 
             // Services
             Services.AddScoped<IBaseService<Cidade>, BaseService<Cidade>>();
@@ -49,19 +50,17 @@ namespace ReservaHoteis.App.Infra
             Services.AddScoped<IBaseService<Contrato>, BaseService<Contrato>>();
             Services.AddScoped<IBaseService<Hotel>, BaseService<Hotel>>();
             Services.AddScoped<IBaseService<Avaliacao>, BaseService<Avaliacao>>();
+            Services.AddScoped<IBaseService<Usuario>, BaseService<Usuario>>();
 
             // Formulários
-            
             Services.AddTransient<Login, Login>();
             Services.AddTransient<CadastroCidade, CadastroCidade>();
             Services.AddTransient<CadastroCliente, CadastroCliente>();
             Services.AddTransient<CadastroContrato, CadastroContrato>();
             Services.AddTransient<CadastroHotel, CadastroHotel>();
             Services.AddTransient<CadastroAvaliacao, CadastroAvaliacao>();
-            
 
             // Mapping
-            
             Services.AddSingleton(new MapperConfiguration(config =>
             {
                 config.CreateMap<Cliente, ClienteModel>();
@@ -69,14 +68,21 @@ namespace ReservaHoteis.App.Infra
                     .ForMember(d => d.NomeEstado, d => d.MapFrom(x => $"{x.Nome}/{x.Estado}"));
                
                 config.CreateMap<Contrato, ContratoModel>()
+                    .ForMember(d => d.idHotel, d => d.MapFrom(x => x.Hotel!.Id))
                     .ForMember(d => d.Hotel, d => d.MapFrom(x => $"{x.Hotel!.Nome}"))
-                    .ForMember(d => d.IdHotel, d => d.MapFrom(x => x.Hotel!.Id))
-                    .ForMember(d => d.Cliente, d => d.MapFrom(x => $"{x.Cliente!.Nome}"))
-                    .ForMember(d => d.IdCliente, d => d.MapFrom(x => x.Cliente!.Id));
+                    .ForMember(d => d.idCliente, d => d.MapFrom(x => x.Cliente!.Id))
+                    .ForMember(d => d.Cliente, d => d.MapFrom(x => $"{x.Cliente!.Nome}"));
 
-                config.CreateMap<Hotel, HotelModel>();
-                config.CreateMap<Avaliacao, AvaliacaoModel>();
-                
+                config.CreateMap<Hotel, HotelModel>()
+                    .ForMember(d => d.idCidade, d => d.MapFrom(x => x.Cidade!.Id))
+                    .ForMember(d => d.Cidade, d => d.MapFrom(x => $"{x.Cidade!.Nome}/{x.Cidade!.Estado}"));                  
+
+                config.CreateMap<Avaliacao, AvaliacaoModel>()
+                    .ForMember(d => d.idHotel, d => d.MapFrom(x => x.Hotel!.Id))
+                    .ForMember(d => d.Hotel, d => d.MapFrom(x => $"{x.Hotel!.Nome}"))
+                    .ForMember(d => d.idCliente, d => d.MapFrom(x => x.Cliente!.Id))
+                    .ForMember(d => d.Cliente, d => d.MapFrom(x => $"{x.Cliente!.Nome}"));
+
             }).CreateMapper());
             
 

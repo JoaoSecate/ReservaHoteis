@@ -10,7 +10,7 @@ namespace ReservaHoteis.App
 {
     public partial class FormPrincipal : Form
     {
-        public static Cliente Cliente { get; set; }
+        public static Usuario Usuario { get; set; }
         public FormPrincipal()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace ReservaHoteis.App
                 }
                 else
                 {
-                    //lblCliente.Text = $"Usuário: {Cliente.Nome}";
+                    txtNome.Text = $"{Usuario.Nome}";
                 }
             }
         }
@@ -70,6 +70,14 @@ namespace ReservaHoteis.App
         private void btnCidades_Click(object sender, EventArgs e)
         {
             Exibeformulario<CadastroCidade>();
+        }
+
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
